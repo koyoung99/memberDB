@@ -11,8 +11,9 @@ public class DepartmentApp {
 		String num;
 		boolean stop = true;
 		while (true) {
-			System.out.println("-------------------------------------------------------------");
-			System.out.println("1.근태관리 2. 부서관리 3. 회원관리");
+			System.out.println("----------------------------------------------------");
+			System.out.println("         1.근태관리 2. 부서관리 3. 회원관리");
+			System.out.println("----------------------------------------------------");
 			System.out.print("메뉴선택 >");
 
 			num = sc.nextLine();
@@ -27,9 +28,9 @@ public class DepartmentApp {
 				departmentDao.departmentMemberInfo();
 				System.out.println("\n");
 				System.out.println("\t\t\t<메뉴>");
-				System.out.println("==========================================================");
+				System.out.println("=============================================================");
 				System.out.println(" 1.부서추가 2.부서수정 3.부서삭제");
-				System.out.println("==========================================================");
+				System.out.println("=============================================================");
 				System.out.println("(뒤로가기: -1, 종료: /q)");
 				System.out.print("메뉴선택 >");
 				String i = sc.nextLine();
@@ -46,7 +47,7 @@ public class DepartmentApp {
 
 				case "2":
 					System.out.println("1.부서장 2.부서명 \n" + "\n(-1.뒤로가기 /q.종료)");
-					System.out.println("-------------------------------------------");
+					System.out.println("----------------------------------------------------");
 					System.out.print("메뉴선택>");
 					String menuNo = sc.nextLine();
 					switch (menuNo) {
@@ -90,7 +91,7 @@ public class DepartmentApp {
 				case "3":
 
 //					List<DepartmentVo> departmentNameList=departmentDao.departmentNameList();
-					System.out.println("--------------부서삭제-------------------");
+					System.out.println("----------------------------------------------------");
 //					for(int no=1; no<departmentNameList.size(); no++) {
 //						departmentNameList.get(no);
 //					}
@@ -113,17 +114,17 @@ public class DepartmentApp {
 						departmentDao.departmentDelete(num);
 						System.out.println("관리팀이 삭제되었습니다.");
 						// 바뀐 리스트 출력
-					} else if (num.equals("3")) {
+					} else if (num.equals("18")) {
+						// departmentDao.departmentUpdate(num);
+						System.out.println("");
+						departmentDao.departmentDelete(num);
+						System.out.println("경비팀이 삭제되었습니다.");
+						// 바뀐 리스트 출력
+					} else if (num.equals("19")) {
 						// departmentDao.departmentUpdate(num);
 						System.out.println("");
 						departmentDao.departmentDelete(num);
 						System.out.println("영업팀이 삭제되었습니다.");
-						// 바뀐 리스트 출력
-					} else if (num.equals("4")) {
-						// departmentDao.departmentUpdate(num);
-						System.out.println("");
-						departmentDao.departmentDelete(num);
-						System.out.println("개발팀이 삭제되었습니다.");
 						// 바뀐 리스트 출력
 					}
 					break;

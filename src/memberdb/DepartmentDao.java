@@ -160,7 +160,9 @@ public class DepartmentDao {
 			rs = pstmt.executeQuery();
 
 			// 4.결과처리
-			System.out.println("******************부서명리스트**********************");
+			System.out.println("----------------------------------------------------");
+			System.out.println("            선택한 부서에 대한 리스트");
+			System.out.println("----------------------------------------------------");
 			while (rs.next()) {
 				int departmentrId = rs.getInt("department_id");
 				String departmentName = rs.getString("department_name");
@@ -194,9 +196,9 @@ public class DepartmentDao {
 			count = pstmt.executeUpdate();
 
 			// 4.결과처리
-			System.out.println("-------------------------------------------------");
-			System.out.println("              부서가 추가되었습니다.                  ");
-			System.out.println("-------------------------------------------------");
+			System.out.println("----------------------------------------------------");
+			System.out.println("                     부서추가");
+			System.out.println("----------------------------------------------------");
 
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
@@ -227,7 +229,9 @@ public class DepartmentDao {
 			rs = pstmt.executeQuery();
 
 			// 4.결과처리
-			System.out.println("******************부서장리스트**********************");
+			System.out.println("----------------------------------------------------");
+			System.out.println("                  부서장리스트");
+			System.out.println("----------------------------------------------------");
 			while (rs.next()) {
 				int memberId = rs.getInt("member_id");
 				String managerName = rs.getString("name");
@@ -291,9 +295,9 @@ public class DepartmentDao {
 			count = pstmt.executeUpdate();
 
 			// 4.결과처리
-			System.out.println("-------------------------------------------------");
-			System.out.println("              부서명이 수정되었습니다..              ");
-			System.out.println("-------------------------------------------------");
+			System.out.println("----------------------------------------------------");
+			System.out.println("            수정완료");
+			System.out.println("----------------------------------------------------");
 
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
@@ -322,7 +326,9 @@ public class DepartmentDao {
 			rs = pstmt.executeQuery();
 
 			// 4.결과처리
-			System.out.println("*********선택한 부서에 대한 리스트***********");
+			System.out.println("----------------------------------------------------");
+			System.out.println("            선택한 부서에 대한 리스트");
+			System.out.println("----------------------------------------------------");
 			while (rs.next()) {
 				int memberId = rs.getInt("member_id");
 				String managerName = rs.getString("name");
