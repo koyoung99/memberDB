@@ -18,13 +18,13 @@ public class DepartmentApp {
 			num = sc.nextLine();
 			System.out.println();
 //			departmentDao.memberStatus();
-			System.out.println("-------------------------------------------------------------");
-			System.out.println("부서번호		부서이름		부서장		부서인원수");
-			System.out.println("-------------------------------------------------------------");
-			departmentDao.departmentMemberInfo();
 
 			switch (num) { // 근태관리 부서관리 회원관리 switch of num
 			case "2":
+				System.out.println("-------------------------------------------------------------");
+				System.out.println("부서번호		부서이름		부서장		부서인원수");
+				System.out.println("-------------------------------------------------------------");
+				departmentDao.departmentMemberInfo();
 				System.out.println("\n");
 				System.out.println("\t\t\t<메뉴>");
 				System.out.println("==========================================================");

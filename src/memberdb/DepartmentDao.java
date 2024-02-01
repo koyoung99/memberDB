@@ -257,6 +257,7 @@ public class DepartmentDao {
 			pstmt.setInt(2, managerUpdate);
 
 			pstmt.executeUpdate();
+		
 
 			System.out.println("-------------------------------------------------");
 			System.out.println("              부서장이 수정되었습니다..              ");
